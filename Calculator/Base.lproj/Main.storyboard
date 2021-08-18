@@ -56,6 +56,9 @@
                                                     <color key="titleColor" systemColor="labelColor"/>
                                                     <color key="titleShadowColor" systemColor="opaqueSeparatorColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="clicked_backspace:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RkB-yi-Koy"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemGray6Color"/>
@@ -114,6 +117,9 @@
                                                     <color key="titleColor" systemColor="labelColor"/>
                                                     <color key="titleShadowColor" systemColor="opaqueSeparatorColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="clicked_7:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PFM-qi-5e1"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HX5-Fc-Pbn">
                                                 <rect key="frame" x="94" y="0.0" width="92" height="90"/>
@@ -124,6 +130,9 @@
                                                     <color key="titleColor" systemColor="labelColor"/>
                                                     <color key="titleShadowColor" systemColor="opaqueSeparatorColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="clicked_8:" destination="BYZ-38-t0r" eventType="touchUpInside" id="46w-rc-tPM"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7MQ-rx-IeS">
                                                 <rect key="frame" x="188" y="0.0" width="92" height="90"/>
@@ -134,6 +143,9 @@
                                                     <color key="titleColor" systemColor="labelColor"/>
                                                     <color key="titleShadowColor" systemColor="opaqueSeparatorColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="clicked_9:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zP3-qY-JkU"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mN3-lZ-yef">
                                                 <rect key="frame" x="282" y="0.0" width="92" height="90"/>
@@ -159,6 +171,9 @@
                                                     <color key="titleColor" systemColor="labelColor"/>
                                                     <color key="titleShadowColor" systemColor="opaqueSeparatorColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="clicked_4:" destination="BYZ-38-t0r" eventType="touchUpInside" id="APS-oC-Byk"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iEc-dJ-CGd">
                                                 <rect key="frame" x="94" y="0.0" width="92" height="90"/>
@@ -169,6 +184,9 @@
                                                     <color key="titleColor" systemColor="labelColor"/>
                                                     <color key="titleShadowColor" systemColor="opaqueSeparatorColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="clicked_5:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cBi-AL-11V"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hVP-aG-zAn">
                                                 <rect key="frame" x="188" y="0.0" width="92" height="90"/>
@@ -179,6 +197,9 @@
                                                     <color key="titleColor" systemColor="labelColor"/>
                                                     <color key="titleShadowColor" systemColor="opaqueSeparatorColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="clicked_6:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pcF-Hc-LR8"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Os6-E9-5q4">
                                                 <rect key="frame" x="282" y="0.0" width="92" height="90"/>
@@ -204,6 +225,9 @@
                                                     <color key="titleColor" systemColor="labelColor"/>
                                                     <color key="titleShadowColor" systemColor="opaqueSeparatorColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="clicked_1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="net-qT-mtN"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L2M-bi-fGb">
                                                 <rect key="frame" x="94" y="0.0" width="92" height="90"/>
@@ -214,6 +238,9 @@
                                                     <color key="titleColor" systemColor="labelColor"/>
                                                     <color key="titleShadowColor" systemColor="opaqueSeparatorColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="clicked_2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Kp-PG-Ez2"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M37-co-WMu">
                                                 <rect key="frame" x="188" y="0.0" width="92" height="90"/>
@@ -224,6 +251,9 @@
                                                     <color key="titleColor" systemColor="labelColor"/>
                                                     <color key="titleShadowColor" systemColor="opaqueSeparatorColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="clicked_3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dSm-4x-dJf"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UF5-Sa-xwM">
                                                 <rect key="frame" x="282" y="0.0" width="92" height="90"/>
@@ -249,6 +279,9 @@
                                                     <color key="titleColor" systemColor="labelColor"/>
                                                     <color key="titleShadowColor" systemColor="opaqueSeparatorColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="clicked_toggle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zwR-kj-FXU"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JYT-ka-u6v">
                                                 <rect key="frame" x="94" y="0.0" width="92" height="90"/>
@@ -259,6 +292,9 @@
                                                     <color key="titleColor" systemColor="labelColor"/>
                                                     <color key="titleShadowColor" systemColor="opaqueSeparatorColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="clicked_0:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Sf-bt-RFc"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MSx-Fk-RJd">
                                                 <rect key="frame" x="188" y="0.0" width="92" height="90"/>
@@ -269,6 +305,9 @@
                                                     <color key="titleColor" systemColor="labelColor"/>
                                                     <color key="titleShadowColor" systemColor="opaqueSeparatorColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="clicked_dot:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ixx-Zr-KIk"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="78F-vf-co7">
                                                 <rect key="frame" x="282" y="0.0" width="92" height="90"/>
@@ -315,6 +354,10 @@
                                 <rect key="frame" x="360" y="234" width="34" height="70"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="changed_number:" destination="BYZ-38-t0r" eventType="valueChanged" id="aL2-N6-1NN"/>
+                                    <action selector="clicked_0:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="qsf-ij-9oc"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OxP-I4-pK8">
                                 <rect key="frame" x="20" y="248" width="30" height="42"/>
@@ -353,6 +396,9 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4Fo-TI-0Fv" secondAttribute="trailing" constant="20" id="y9X-6N-cLe"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="inputNumber" destination="dnf-0f-GSf" id="1dI-g9-aaO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
