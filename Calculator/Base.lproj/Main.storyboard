@@ -355,8 +355,7 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="changed_number:" destination="BYZ-38-t0r" eventType="valueChanged" id="aL2-N6-1NN"/>
-                                    <action selector="clicked_0:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="qsf-ij-9oc"/>
+                                    <action selector="changed_number:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="nxs-Zz-8xl"/>
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OxP-I4-pK8">
