@@ -146,26 +146,47 @@ class ViewController: UIViewController {
     
     
     
+    //push input number
+    func push_input() {
+        var number:String = ""
+        for i in inputNumber.text!.indices {
+            if i == inputNumber.text!.index(inputNumber.text!.startIndex, offsetBy: 0) && inputNumber.text![i] == "-" {
+                number += String(inputNumber.text![i])
+            } else if inputNumber.text![i].isNumber {
+                number += String(inputNumber.text![i])
+            }
+        }
+        stack.append(number)
+    }
+    
+    
+    
+    
     //MARK: Operator
     //÷
     @IBAction func clicked_division(_ sender: Any) {
-        
+        push_input()
+        stack.append("/")
     }
     //×
     @IBAction func clicked_multiply(_ sender: Any) {
-        
+        push_input()
+        stack.append("*")
     }
     //-
     @IBAction func clicked_minus(_ sender: Any) {
-        
+        push_input()
+        stack.append("-")
     }
     //+
     @IBAction func clicked_plus(_ sender: Any) {
-        
+        push_input()
+        stack.append("+")
     }
     //%
     @IBAction func clicked_remainder(_ sender: Any) {
-        
+        push_input()
+        stack.append("%")
     }
     
     
@@ -174,6 +195,42 @@ class ViewController: UIViewController {
     //MARK: Recall
     //=
     @IBAction func clicked_recall(_ sender: Any) {
-        
+        stack.append("=")
     }
+    
+    
+    
+    
+    
+    //MARK: Math
+    //1⁄x
+    @IBAction func clicked_fraction(_ sender: Any) {
+        push_input()
+    }
+    //x^2
+    @IBAction func clicked_pow(_ sender: Any) {
+        push_input()
+    }
+    //√x
+    @IBAction func clicked_sqrt(_ sender: Any) {
+        push_input()
+    }
+    
+    
+    
+    
+    
+    //MARK: Clear
+    //normal clear
+    @IBAction func clicked_clear(_ sender: Any) {
+        stack.removeAll()
+        stackNumber.text = "0"
+        stackNumber.isHidden = true
+        inputNumber.text = "0"
+    }
+    //clear error
+    @IBAction func clicked_clear_error(_ sender: Any) {
+        inputNumber.text = "0"
+    }
+    
 }

@@ -43,6 +43,9 @@
                                                     <color key="titleColor" systemColor="labelColor"/>
                                                     <color key="titleShadowColor" systemColor="opaqueSeparatorColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="clicked_clear_error:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fm2-bb-mba"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DuF-Uq-t84">
                                                 <rect key="frame" x="188" y="0.0" width="92" height="90"/>
@@ -53,6 +56,9 @@
                                                     <color key="titleColor" systemColor="labelColor"/>
                                                     <color key="titleShadowColor" systemColor="opaqueSeparatorColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="clicked_clear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kdD-3H-45g"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iPe-b6-7f4">
                                                 <rect key="frame" x="282" y="0.0" width="92" height="90"/>
@@ -80,6 +86,9 @@
                                                 <state key="normal" title="1⁄x">
                                                     <color key="titleColor" systemColor="labelColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="clicked_fraction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zD1-oH-SSG"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H7L-vp-0f1">
                                                 <rect key="frame" x="94" y="0.0" width="92" height="90"/>
@@ -90,6 +99,9 @@
                                                     <color key="titleColor" systemColor="labelColor"/>
                                                     <color key="titleShadowColor" systemColor="opaqueSeparatorColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="clicked_pow:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5br-WA-E22"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AiU-GX-Ysi">
                                                 <rect key="frame" x="188" y="0.0" width="92" height="90"/>
@@ -100,6 +112,9 @@
                                                     <color key="titleColor" systemColor="labelColor"/>
                                                     <color key="titleShadowColor" systemColor="opaqueSeparatorColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="clicked_sqrt:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zld-OW-8UT"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q62-bf-6Wd">
                                                 <rect key="frame" x="282" y="0.0" width="92" height="90"/>
