@@ -24,14 +24,19 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cqn-IN-Bje">
                                                 <rect key="frame" x="0.0" y="0.0" width="92" height="90"/>
+                                                <color key="backgroundColor" systemColor="systemGray6Color"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <size key="titleShadowOffset" width="1" height="1"/>
                                                 <state key="normal" title="%">
                                                     <color key="titleColor" systemColor="labelColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="clicked_remainder:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wS5-Pi-6jM"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kqz-Jf-Ts3">
                                                 <rect key="frame" x="94" y="0.0" width="92" height="90"/>
+                                                <color key="backgroundColor" systemColor="systemGray6Color"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <size key="titleShadowOffset" width="1" height="1"/>
                                                 <state key="normal" title="CE">
@@ -41,6 +46,7 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DuF-Uq-t84">
                                                 <rect key="frame" x="188" y="0.0" width="92" height="90"/>
+                                                <color key="backgroundColor" systemColor="systemGray6Color"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <size key="titleShadowOffset" width="1" height="1"/>
                                                 <state key="normal" title="C">
@@ -50,6 +56,7 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iPe-b6-7f4">
                                                 <rect key="frame" x="282" y="0.0" width="92" height="90"/>
+                                                <color key="backgroundColor" red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <size key="titleShadowOffset" width="1" height="1"/>
                                                 <state key="normal" title="⏎">
@@ -61,13 +68,13 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="cXX-vB-PVm">
                                         <rect key="frame" x="0.0" y="92" width="374" height="90"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g5U-Tv-D91">
                                                 <rect key="frame" x="0.0" y="0.0" width="92" height="90"/>
+                                                <color key="backgroundColor" systemColor="systemGray6Color"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <size key="titleShadowOffset" width="1" height="1"/>
                                                 <state key="normal" title="1⁄x">
@@ -76,6 +83,7 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H7L-vp-0f1">
                                                 <rect key="frame" x="94" y="0.0" width="92" height="90"/>
+                                                <color key="backgroundColor" systemColor="systemGray6Color"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <size key="titleShadowOffset" width="1" height="1"/>
                                                 <state key="normal" title="x^2">
@@ -85,6 +93,7 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AiU-GX-Ysi">
                                                 <rect key="frame" x="188" y="0.0" width="92" height="90"/>
+                                                <color key="backgroundColor" systemColor="systemGray6Color"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <size key="titleShadowOffset" width="1" height="1"/>
                                                 <state key="normal" title="√x">
@@ -101,9 +110,11 @@
                                                     <color key="titleColor" systemColor="labelColor"/>
                                                     <color key="titleShadowColor" systemColor="opaqueSeparatorColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="clicked_division:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Poq-yr-qhx"/>
+                                                </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="oaa-IF-Ocn">
                                         <rect key="frame" x="0.0" y="184" width="374" height="90"/>
@@ -156,6 +167,9 @@
                                                     <color key="titleColor" systemColor="labelColor"/>
                                                     <color key="titleShadowColor" systemColor="opaqueSeparatorColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="clicked_multiply:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RdS-CC-OXY"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -210,6 +224,9 @@
                                                     <color key="titleColor" systemColor="labelColor"/>
                                                     <color key="titleShadowColor" systemColor="opaqueSeparatorColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="clicked_minus:" destination="BYZ-38-t0r" eventType="touchUpInside" id="66L-Bu-Owq"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -264,6 +281,9 @@
                                                     <color key="titleColor" systemColor="labelColor"/>
                                                     <color key="titleShadowColor" systemColor="opaqueSeparatorColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="clicked_plus:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fwc-Fi-z4O"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -318,6 +338,9 @@
                                                     <color key="titleColor" systemColor="labelColor"/>
                                                     <color key="titleShadowColor" systemColor="opaqueSeparatorColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="clicked_recall:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yqq-5j-hm7"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -397,6 +420,7 @@
                     </view>
                     <connections>
                         <outlet property="inputNumber" destination="dnf-0f-GSf" id="1dI-g9-aaO"/>
+                        <outlet property="stackNumber" destination="4Fo-TI-0Fv" id="QdZ-Bx-v3F"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

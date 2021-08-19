@@ -8,6 +8,9 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var stack:[String] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.inputNumber.addTarget(self, action: #selector(self.changed_number_to_edit(_:)), for: .editingChanged)
@@ -21,34 +24,39 @@ class ViewController: UIViewController {
     
     //MARK: Input Number
     @IBOutlet weak var inputNumber: UITextField!
-    
+    func checking() {
+        if inputNumber.text!.count > 1 {
+            let firstIndex = inputNumber.text!.startIndex
+            if inputNumber.text![firstIndex] == "0" {
+                inputNumber.text!.removeFirst()
+            } else if inputNumber.text![firstIndex] == "-" {
+                let secondIndex = inputNumber.text?.index(after: firstIndex)
+                if inputNumber.text![secondIndex!] == "0" {
+                    inputNumber.text!.remove(at: secondIndex!)
+                }
+            }
+        }
+        if inputNumber.text?.count == 0 {
+            inputNumber.text! += "0"
+        }
+    }
+    //end edit
     @IBAction func changed_number(_ sender: UITextField) {
-        if inputNumber.text!.count > 1 {
-            let firstIndex = inputNumber.text!.startIndex
-            if inputNumber.text![firstIndex] == "0" {
-                inputNumber.text!.removeFirst()
-            } else if inputNumber.text![firstIndex] == "-" {
-                let secondIndex = inputNumber.text?.index(after: firstIndex)
-                if inputNumber.text![secondIndex!] == "0" {
-                    inputNumber.text!.remove(at: secondIndex!)
-                }
-            }
-        }
+        checking()
+    }
+    //editing
+    @objc func changed_number_to_edit(_ sender: Any) {
+        checking()
     }
     
-    @objc func changed_number_to_edit(_ sender: Any) {
-        if inputNumber.text!.count > 1 {
-            let firstIndex = inputNumber.text!.startIndex
-            if inputNumber.text![firstIndex] == "0" {
-                inputNumber.text!.removeFirst()
-            } else if inputNumber.text![firstIndex] == "-" {
-                let secondIndex = inputNumber.text?.index(after: firstIndex)
-                if inputNumber.text![secondIndex!] == "0" {
-                    inputNumber.text!.remove(at: secondIndex!)
-                }
-            }
-        }
-    }
+    
+    
+    
+    
+    //MARK: Stack Number
+    @IBOutlet weak var stackNumber: UILabel!
+    
+    
     
     
     
@@ -93,7 +101,7 @@ class ViewController: UIViewController {
     @IBAction func clicked_9(_ sender: Any) {
         button_clicked("9")
     }
-    
+    //button click
     func button_clicked(_ num:String) {
         inputNumber.text! += num
         if inputNumber.text! == "0\(num)" {
@@ -132,5 +140,40 @@ class ViewController: UIViewController {
         if inputNumber.text?.count == 0 {
             inputNumber.text! += "0"
         }
+    }
+    
+    
+    
+    
+    
+    //MARK: Operator
+    //÷
+    @IBAction func clicked_division(_ sender: Any) {
+        
+    }
+    //×
+    @IBAction func clicked_multiply(_ sender: Any) {
+        
+    }
+    //-
+    @IBAction func clicked_minus(_ sender: Any) {
+        
+    }
+    //+
+    @IBAction func clicked_plus(_ sender: Any) {
+        
+    }
+    //%
+    @IBAction func clicked_remainder(_ sender: Any) {
+        
+    }
+    
+    
+    
+    
+    //MARK: Recall
+    //=
+    @IBAction func clicked_recall(_ sender: Any) {
+        
     }
 }
