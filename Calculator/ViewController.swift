@@ -10,6 +10,7 @@ import UIKit
 class ViewController: UIViewController {
     
     var stack:[String] = []
+    var new_num:Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -103,6 +104,10 @@ class ViewController: UIViewController {
     }
     //button click
     func button_clicked(_ num:String) {
+        if new_num {
+            new_num = false
+            inputNumber.text! = ""
+        }
         inputNumber.text! += num
         if inputNumber.text! == "0\(num)" {
             inputNumber.text!.removeFirst()
@@ -165,28 +170,31 @@ class ViewController: UIViewController {
     //MARK: Operator
     //÷
     @IBAction func clicked_division(_ sender: Any) {
-        push_input()
-        stack.append("/")
+        process_operator("/")
     }
     //×
     @IBAction func clicked_multiply(_ sender: Any) {
-        push_input()
-        stack.append("*")
+        process_operator("*")
     }
     //-
     @IBAction func clicked_minus(_ sender: Any) {
-        push_input()
-        stack.append("-")
+        process_operator("-")
     }
     //+
     @IBAction func clicked_plus(_ sender: Any) {
-        push_input()
-        stack.append("+")
+        process_operator("+")
     }
     //%
     @IBAction func clicked_remainder(_ sender: Any) {
+        process_operator("%")
+    }
+    
+    func process_operator(_ oper:String) {
         push_input()
-        stack.append("%")
+        stack.append(oper)
+        stackNumber.text = stack.joined()
+        stackNumber.isHidden = false
+        new_num = true
     }
     
     
@@ -195,7 +203,7 @@ class ViewController: UIViewController {
     //MARK: Recall
     //=
     @IBAction func clicked_recall(_ sender: Any) {
-        stack.append("=")
+        process_operator("=")
     }
     
     
@@ -205,15 +213,15 @@ class ViewController: UIViewController {
     //MARK: Math
     //1⁄x
     @IBAction func clicked_fraction(_ sender: Any) {
-        push_input()
+        process_operator("1/x")
     }
     //x^2
     @IBAction func clicked_pow(_ sender: Any) {
-        push_input()
+        process_operator("x^2")
     }
     //√x
     @IBAction func clicked_sqrt(_ sender: Any) {
-        push_input()
+        process_operator("sqrt(x)")
     }
     
     
