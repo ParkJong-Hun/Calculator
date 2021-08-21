@@ -250,60 +250,48 @@ class ViewController: UIViewController, UITextFieldDelegate {
             var y:String = ""
             switch oper {
             case "1/x":
-                stack.removeAll()
-                stack.insert("\(1/Double(x)!)", at: 0)
-                inputNumber.text! = stack[0]
-                stackNumber.text! = stack.joined()
-                return
+                inputNumber.text! = "\(1/Double(x)!)"
+                break
             case "x^2":
-                stack.removeAll()
-                stack.insert("\(pow(Double(x)!, 2))", at: 0)
-                inputNumber.text! = stack[0]
-                stackNumber.text! = stack.joined()
-                return
+                inputNumber.text! = "\(pow(Double(x)!,2))"
+                break
             case "sqrt(x)":
-                stack.removeAll()
-                stack.insert("\(sqrt(Double(x)!))", at: 0)
-                inputNumber.text! = stack[0]
-                stackNumber.text! = stack.joined()
-                return
+                inputNumber.text! = "\(sqrt(Double(x)!))"
+                break
             default:
                 y = stack.removeFirst()
                 break
             }
             switch oper {
             case "+":
-                stack.insert("\(Double(x)! + Double(y)!)", at: 0)
-                inputNumber.text! = stack[0]
-                stackNumber.text! = stack.joined()
-                return
+                inputNumber.text! = "\(Double(x)! + Double(y)!)"
+                break
             case "-":
-                stack.insert("\(Double(x)! - Double(y)!)", at: 0)
-                inputNumber.text! = stack[0]
-                stackNumber.text! = stack.joined()
-                return
+                inputNumber.text! = "\(Double(x)! - Double(y)!)"
+                break
             case "/":
-                stack.insert("\(Double(x)! / Double(y)!)", at: 0)
-                inputNumber.text! = stack[0]
-                stackNumber.text! = stack.joined()
-                return
+                inputNumber.text! = "\(Double(x)! / Double(y)!)"
+                break
             case "*":
-                stack.insert("\(Double(x)! * Double(y)!)", at: 0)
-                inputNumber.text! = stack[0]
-                stackNumber.text! = stack.joined()
-                return
+                inputNumber.text! = "\(Double(x)! * Double(y)!)"
+                break
             case "%":
-                stack.insert("\(Int(x)! % Int(y)!)", at: 0)
-                inputNumber.text! = stack[0]
-                stackNumber.text! = stack.joined()
-                return
+                inputNumber.text! = "\(Int(x)! % Int(y)!)"
+                break
             default:
                 print("Stack Error")
             }
+            stack.removeAll()
             if oper == "=" {
-                stack.removeLast()
                 stackNumber.text! = stack.joined()
+                stack.removeAll()
             }
+            let doubleCmp = Double(inputNumber.text!)!
+            let intCmp =  Int(doubleCmp)
+            if doubleCmp - Double(intCmp) == 0 {
+                inputNumber.text! = "\(intCmp)"
+            }
+            limit_length(textField: inputNumber, maxLength: 9)
         }
     }
     
