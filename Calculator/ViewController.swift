@@ -194,13 +194,104 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBAction func clicked_remainder(_ sender: Any) {
         process_operator("%")
     }
-    
+    //process operator
     func process_operator(_ oper:String) {
         push_input()
         stack.append(oper)
         stackNumber.text = stack.joined()
         stackNumber.isHidden = false
         new_num = true
+        calculate()
+    }
+    //calculate
+    func calculate() {
+        var count = 0
+        for i in stack {
+            switch i {
+            case "+":
+                count += 1
+                break
+            case "-":
+                count += 1
+                break
+            case "/":
+                count += 1
+                break
+            case "*":
+                count += 1
+                break
+            case "=":
+                count += 1
+                break
+            case "%":
+                count += 1
+                break
+            case "1/x":
+                count += 2
+                break
+            case "x^2":
+                count += 2
+                break
+            case "sqrt(x)":
+                count += 2
+                break
+            default:
+                break
+            }
+        }
+        if count >= 2 {
+            let x = stack.removeFirst()
+            let oper = stack.removeFirst()
+            var y:String = ""
+            switch oper {
+            case "1/x":
+                stack.removeAll()
+                stack.insert("\(1/Double(x)!)", at: 0)
+                inputNumber.text! = stack[0]
+                return
+            case "x^2":
+                stack.removeAll()
+                stack.insert("\(pow(Double(x)!, 2))", at: 0)
+                inputNumber.text! = stack[0]
+                return
+            case "sqrt(x)":
+                stack.removeAll()
+                stack.insert("\(sqrt(Double(x)!))", at: 0)
+                inputNumber.text! = stack[0]
+                return
+            default:
+                y = stack.removeFirst()
+                break
+            }
+            switch oper {
+            case "+":
+                stack.insert("\(Double(x)! + Double(y)!)", at: 0)
+                inputNumber.text! = stack[0]
+                return
+            case "-":
+                stack.insert("\(Double(x)! - Double(y)!)", at: 0)
+                inputNumber.text! = stack[0]
+                return
+            case "/":
+                stack.insert("\(Double(x)! / Double(y)!)", at: 0)
+                inputNumber.text! = stack[0]
+                return
+            case "*":
+                stack.insert("\(Double(x)! * Double(y)!)", at: 0)
+                inputNumber.text! = stack[0]
+                return
+            case "%":
+                stack.insert("\(Int(x)! % Int(y)!)", at: 0)
+                inputNumber.text! = stack[0]
+                return
+            default:
+                print("Stack Error")
+            }
+            if oper == "=" {
+                stack.removeAll()
+                stackNumber.text! = stack.joined()
+            }
+        }
     }
     
     
