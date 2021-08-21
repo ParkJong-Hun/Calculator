@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
     
     var stack:[String] = []
     var new_num:Bool = false
@@ -48,9 +48,14 @@ class ViewController: UIViewController {
     //editing
     @objc func changed_number_to_edit(_ sender: Any) {
         checking()
+        limit_length(textField: inputNumber, maxLength: 9)
     }
-    
-    
+    //limit text length
+    func limit_length(textField:UITextField, maxLength:Int) {
+        if textField.text!.count > maxLength {
+            textField.text!.removeLast()
+        }
+    }
     
     
     
@@ -112,6 +117,7 @@ class ViewController: UIViewController {
         if inputNumber.text! == "0\(num)" {
             inputNumber.text!.removeFirst()
         }
+        limit_length(textField: inputNumber, maxLength: 9)
     }
     
     
