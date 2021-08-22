@@ -202,14 +202,21 @@ class ViewController: UIViewController, UITextFieldDelegate {
     func process_operator(_ oper:String) {
         push_input()
         stack.append(oper)
-        stackNumber.text = stack.joined()
+        stackNumber.text = stack.joined(separator: " ")
         stackNumber.isHidden = false
         new_num = true
         calculate()
     }
     //calculate
     func calculate() {
+        print("TEST stack: \(stack.joined())")
+        
         var count = 0
+        var y:String = ""
+        let x:String
+        let oper:String
+        var last:String = ""
+        
         for i in stack {
             switch i {
             case "+":
@@ -225,7 +232,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 count += 1
                 break
             case "=":
-                count += 1
+                count += 2
                 break
             case "%":
                 count += 1
@@ -243,11 +250,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 break
             }
         }
+        
         if count >= 2 {
-            print(stack.joined())
-            let x = stack.removeFirst()
-            let oper = stack.removeFirst()
-            var y:String = ""
+            x = stack.removeFirst()
+            oper = stack.removeFirst()
             switch oper {
             case "1/x":
                 inputNumber.text! = "\(1/Double(x)!)"
@@ -258,33 +264,38 @@ class ViewController: UIViewController, UITextFieldDelegate {
             case "sqrt(x)":
                 inputNumber.text! = "\(sqrt(Double(x)!))"
                 break
+            case "=":
+                stackNumber.text! = stack.joined()
+                break
             default:
                 y = stack.removeFirst()
-                break
-            }
-            switch oper {
-            case "+":
-                inputNumber.text! = "\(Double(x)! + Double(y)!)"
-                break
-            case "-":
-                inputNumber.text! = "\(Double(x)! - Double(y)!)"
-                break
-            case "/":
-                inputNumber.text! = "\(Double(x)! / Double(y)!)"
-                break
-            case "*":
-                inputNumber.text! = "\(Double(x)! * Double(y)!)"
-                break
-            case "%":
-                inputNumber.text! = "\(Int(x)! % Int(y)!)"
-                break
-            default:
-                print("Stack Error")
+                switch oper {
+                case "+":
+                    inputNumber.text! = "\(Double(x)! + Double(y)!)"
+                    break
+                case "-":
+                    inputNumber.text! = "\(Double(x)! - Double(y)!)"
+                    break
+                case "/":
+                    inputNumber.text! = "\(Double(x)! / Double(y)!)"
+                    break
+                case "*":
+                    inputNumber.text! = "\(Double(x)! * Double(y)!)"
+                    break
+                case "%":
+                    inputNumber.text! = "\(Int(x)! % Int(y)!)"
+                    break
+                default:
+                    print(stack)
+                    break
+                }
+                last = stack.removeLast()
             }
             stack.removeAll()
-            if oper == "=" {
-                stackNumber.text! = stack.joined()
-                stack.removeAll()
+            if count != 3 && last != "" {
+                stack.append(inputNumber.text!)
+                stack.append(last)
+                stackNumber.text! = stack.joined(separator: " ")
             }
             let doubleCmp = Double(inputNumber.text!)!
             let intCmp =  Int(doubleCmp)
