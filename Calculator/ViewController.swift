@@ -10,6 +10,7 @@ import UIKit
 class ViewController: UIViewController, UITextFieldDelegate {
     
     var stack:[String] = []
+    var history:[[String]] = []
     var new_num:Bool = false
     
     override func viewDidLoad() {
@@ -252,8 +253,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }
         
         if count >= 2 {
+            history.append(stack)
+            print("\nHistory \(history)")
+            
             x = stack.removeFirst()
             oper = stack.removeFirst()
+            
             switch oper {
             case "1/x":
                 inputNumber.text! = "\(1/Double(x)!)"
@@ -269,6 +274,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 break
             default:
                 y = stack.removeFirst()
+                
                 switch oper {
                 case "+":
                     inputNumber.text! = "\(Double(x)! + Double(y)!)"
@@ -286,23 +292,26 @@ class ViewController: UIViewController, UITextFieldDelegate {
                     inputNumber.text! = "\(Int(x)! % Int(y)!)"
                     break
                 default:
-                    print(stack)
+                    print("ERROR CASE")
                     break
                 }
                 last = stack.removeLast()
             }
+            
             stack.removeAll()
+            
             if count != 3 && last != "" {
                 stack.append(inputNumber.text!)
                 stack.append(last)
                 stackNumber.text! = stack.joined(separator: " ")
             }
+            
             let doubleCmp = Double(inputNumber.text!)!
             let intCmp =  Int(doubleCmp)
             if doubleCmp - Double(intCmp) == 0 {
                 inputNumber.text! = "\(intCmp)"
             }
-            limit_length(textField: inputNumber, maxLength: 9)
+            
         }
     }
     
@@ -341,8 +350,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
     //normal clear
     @IBAction func clicked_clear(_ sender: Any) {
         stack.removeAll()
+        
         stackNumber.text = "0"
         stackNumber.isHidden = true
+        
         inputNumber.text = "0"
     }
     //clear error
