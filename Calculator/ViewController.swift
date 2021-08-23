@@ -120,7 +120,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
     //MARK: Dot, Toggle
     //.
     @IBAction func clicked_dot(_ sender: Any) {
-        inputNumber.text! += "."
+        if !(inputNumber.text!.contains(".")) {
+            inputNumber.text! += "."
+        }
     }
     //+/-
     @IBAction func clicked_toggle(_ sender: Any) {
