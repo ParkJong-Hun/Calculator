@@ -12,6 +12,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     var stack:[String] = []
     var history:[[String]] = []
     var new_num:Bool = false
+    var big_num:Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -276,13 +277,21 @@ class ViewController: UIViewController, UITextFieldDelegate {
                     inputNumber.text! = "\(Double(x)! - Double(y)!)"
                     break
                 case "/":
-                    inputNumber.text! = "\(Double(x)! / Double(y)!)"
+                    if x != "0" && y != "0" {
+                        inputNumber.text! = "\(Double(x)! / Double(y)!)"
+                    } else {
+                        stackNumber.text! = "Zero impossible to use this operation"
+                    }
                     break
                 case "*":
                     inputNumber.text! = "\(Double(x)! * Double(y)!)"
                     break
                 case "%":
-                    inputNumber.text! = "\(Int(x)! % Int(y)!)"
+                    if x != "0" && y != "0" {
+                        inputNumber.text! = "\(Int(x)! % Int(y)!)"
+                    } else {
+                        stackNumber.text! = "Zero impossible to use this operation"
+                    }
                     break
                 default:
                     print("ERROR CASE")
@@ -304,9 +313,29 @@ class ViewController: UIViewController, UITextFieldDelegate {
             if doubleCmp - Double(intCmp) == 0 {
                 inputNumber.text! = "\(intCmp)"
             }
-            while inputNumber!.text!.count > 9 {
-                inputNumber!.text!.removeLast()
+            if inputNumber.text!.contains(".") {
+                while inputNumber!.text!.count > 9{
+                    inputNumber!.text!.removeLast()
+                }
+            } else if inputNumber.text!.count > 9 {
+                big_num = true
+                while inputNumber!.text!.count > 9{
+                    inputNumber!.text!.removeLast()
+                }
             }
+            check_big_num()
+        }
+    }
+    //check big_num
+    func check_big_num() {
+        if big_num {
+            stackNumber.textColor = UIColor.red
+            inputNumber.textColor = UIColor.red
+            stackNumber.text! = "Big number. so, value isn't correct"
+            big_num = false
+        } else {
+            stackNumber.textColor = UIColor.black
+            inputNumber.textColor = UIColor.black
         }
     }
     
@@ -346,15 +375,23 @@ class ViewController: UIViewController, UITextFieldDelegate {
     //normal clear
     @IBAction func clicked_clear(_ sender: Any) {
         stack.removeAll()
-        
+
         stackNumber.text = "0"
         stackNumber.isHidden = true
         
         inputNumber.text = "0"
+        
+        check_big_num()
     }
     //clear error
     @IBAction func clicked_clear_error(_ sender: Any) {
         inputNumber.text = "0"
+        
+        if stackNumber.text!.contains("Big number. so, value isn't correct") {
+            stackNumber.text = "0"
+            stackNumber.isHidden = true
+        }
+        check_big_num()
     }
     
     
@@ -375,5 +412,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         } else {
             stackNumber.text! = "You don't have history"
         }
+        
+        check_big_num()
     }
 }
