@@ -413,10 +413,17 @@
                                 <color key="shadowColor" systemColor="opaqueSeparatorColor"/>
                                 <size key="shadowOffset" width="1" height="1"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="copyright ©PJH all rights reserved" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Glo-dG-Wk2">
+                                <rect key="frame" x="69" y="870" width="276" height="12"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Glo-dG-Wk2" secondAttribute="bottom" constant="14" id="6Qh-V4-opf"/>
                             <constraint firstItem="aGC-K2-Xre" firstAttribute="top" secondItem="dnf-0f-GSf" secondAttribute="bottom" constant="8" symbolic="YES" id="6la-p9-GA2"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aGC-K2-Xre" secondAttribute="trailing" constant="20" id="7WJ-IZ-yTs"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dnf-0f-GSf" secondAttribute="trailing" constant="20" id="Flc-Kp-e5n"/>
@@ -424,13 +431,16 @@
                             <constraint firstItem="aGC-K2-Xre" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="LRO-X5-czM"/>
                             <constraint firstItem="4Fo-TI-0Fv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="161" id="M6K-WI-CJ5"/>
                             <constraint firstItem="aGC-K2-Xre" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="268" id="Ohx-oS-PXl"/>
+                            <constraint firstAttribute="trailing" secondItem="Glo-dG-Wk2" secondAttribute="trailing" constant="69" id="RUq-G4-XOV"/>
                             <constraint firstItem="aGC-K2-Xre" firstAttribute="top" secondItem="OxP-I4-pK8" secondAttribute="bottom" constant="22" id="TH4-9R-2kZ"/>
                             <constraint firstItem="dnf-0f-GSf" firstAttribute="top" secondItem="4Fo-TI-0Fv" secondAttribute="bottom" constant="8" symbolic="YES" id="UtZ-ai-vjK"/>
                             <constraint firstItem="OxP-I4-pK8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="dpf-ba-JJa"/>
+                            <constraint firstItem="Glo-dG-Wk2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="69" id="qa0-Lc-SL3"/>
                             <constraint firstItem="dnf-0f-GSf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="190" id="rBB-Yu-Ztd"/>
                             <constraint firstItem="OxP-I4-pK8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="204" id="rVA-JZ-mT0"/>
                             <constraint firstItem="aGC-K2-Xre" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="uXD-H8-Wcc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4Fo-TI-0Fv" secondAttribute="trailing" constant="20" id="y9X-6N-cLe"/>
+                            <constraint firstItem="Glo-dG-Wk2" firstAttribute="top" secondItem="aGC-K2-Xre" secondAttribute="bottom" constant="8" symbolic="YES" id="yFM-EA-TeT"/>
                         </constraints>
                     </view>
                     <connections>
