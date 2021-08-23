@@ -392,9 +392,6 @@
                                 <rect key="frame" x="360" y="234" width="34" height="70"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="changed_number:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="nxs-Zz-8xl"/>
-                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OxP-I4-pK8">
                                 <rect key="frame" x="20" y="248" width="30" height="42"/>
@@ -404,6 +401,9 @@
                                     <color key="titleColor" systemColor="labelColor"/>
                                     <color key="titleShadowColor" systemColor="opaqueSeparatorColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="clicked_go_past:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QiS-1S-ljt"/>
+                                </connections>
                             </button>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Fo-TI-0Fv">
                                 <rect key="frame" x="58" y="205" width="336" height="21"/>

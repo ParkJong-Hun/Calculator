@@ -15,9 +15,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.inputNumber.addTarget(self, action: #selector(self.changed_number_to_edit(_:)), for: .editingChanged)
-        self.inputNumber.addTarget(self, action: #selector(self.changed_number_to_edit(_:)), for: .valueChanged)
         inputNumber.text = "0"
+        inputNumber.isUserInteractionEnabled = false
     }
     
     
@@ -42,21 +41,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
             inputNumber.text! += "0"
         }
     }
-    //end edit
-    @IBAction func changed_number(_ sender: UITextField) {
-        checking()
-    }
-    //editing
-    @objc func changed_number_to_edit(_ sender: Any) {
-        checking()
-        limit_length(textField: inputNumber, maxLength: 9)
-    }
     //limit text length
     func limit_length(textField:UITextField, maxLength:Int) {
         if textField.text!.count > maxLength {
             textField.text!.removeLast()
         }
     }
+    
+    
     
     
     
@@ -174,6 +166,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }
         stack.append(number)
     }
+    
     
     
     
@@ -311,9 +304,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
             if doubleCmp - Double(intCmp) == 0 {
                 inputNumber.text! = "\(intCmp)"
             }
-            
+            while inputNumber!.text!.count > 9 {
+                inputNumber!.text!.removeLast()
+            }
         }
     }
+    
     
     
     
@@ -361,4 +357,23 @@ class ViewController: UIViewController, UITextFieldDelegate {
         inputNumber.text = "0"
     }
     
+    
+    
+    
+    
+    //MARK: Go Past
+    @IBAction func clicked_go_past(_ sender: Any) {
+        if history.count > 1 {
+            print("Done Time travel")
+            stack.removeAll()
+            history.removeLast()
+            stack = history.removeLast()
+            stackNumber.text = stack.joined(separator: " ")
+            stackNumber.isHidden = false
+            new_num = true
+            calculate()
+        } else {
+            stackNumber.text! = "You don't have history"
+        }
+    }
 }
